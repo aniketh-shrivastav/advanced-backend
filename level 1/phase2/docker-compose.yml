@@ -1,7 +1,8 @@
 services:
   backend:
     build: ./backend
-    environment: -PORT=7000
+    env_file:
+      - ./backend/.env
     ports:
       - 8000:7000
 
